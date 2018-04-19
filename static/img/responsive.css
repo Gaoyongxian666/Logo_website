@@ -1,0 +1,14 @@
+/*幻灯片*/
+.fkbanner { width: 100%; position: relative; z-index: 9; }
+.owl-carousel .owl-wrapper { display: none; position: relative; -webkit-transform: translate3d(0px, 0px, 0px); }
+.owl-carousel .owl-wrapper-outer { overflow: hidden; position: relative; width: 100%; }
+.owl-carousel .owl-item { float: left; }
+#owl-demo { position: relative; width: 100%; margin-left: auto; margin-right: auto; }
+#owl-demo .item { position: relative; display: block; }
+#owl-demo img { display: block; width: 100%; }
+.owl-pagination { position: absolute; left: 0; bottom: 0px; width: 100%; height: 22px; text-align: center; }
+.owl-page { display: inline-block; width: 12px; height: 12px; margin: 0 5px; background-image: url(icon4.png); *display: inline;
+*zoom: 1;
+}
+.owl-pagination .active { width: 12px; background-image: url(icon5.png); }
+.owl-buttons div { position: absolute; top: 50%; width: 24px; height: 48px; margin-top: -40px; text-indent: -9999px; }

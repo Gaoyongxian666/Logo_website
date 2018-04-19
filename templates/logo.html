@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<title>无标题文档</title>
+<link href="../static/css/two.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../static/img/jquery-1.8.3.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../static/img/responsive.css">
+<script type="text/javascript" src="../static/img/banner.js"></script>
+<script language="javascript">
+$(function(){
+	$('#owl-demo').owlCarousel({
+		items: 1,
+		navigation: true,
+		navigationText: ["上一个","下一个"],
+		autoPlay: true,
+		stopOnHover: true
+	}).hover(function(){
+		$('.owl-buttons').show();
+	}, function(){
+		$('.owl-buttons').hide();
+	});
+});
+</script>
+
+</head>
+
+<body>
+<!--顶部导航-->
+     <div class="header">
+     	<div class="logo">
+     		<img src="../static/img/logo.png"/>
+     	</div>
+     	<div class="nav">
+     	    <ul>
+     	    	<li>xxxx</li>
+     	    	<li>xxxx</li>
+     	    	<li>xxxx</li>
+     	    	<li>xxxx</li>
+     	    	<li>xxxx</li>
+     	    	<li>xxxx</li>
+     	    </ul>
+     	</div>  
+      	
+     </div>
+<!--顶部导航-->
+<!--banner轮播-->
+     <div id="banner" class="jzbanner">
+          <div id="owl-demo" class="owl-carousel">
+            <a href="#" class="item" ><img src="../static/img/lunbo1.jpg"/></a> <a href="#" class="item" ><img src="../static/img/lunbo2.jpg" /></a> <a href="#" class="item" ><img src="../static/img/lunbo3.jpg" /></a> </div>
+    </div>
+<!--banner轮播-->
+
+<!--上传文件-->
+  <!--上传按钮-->
+   <div class="form1">
+        <div class="form-1">
+             <label class="ui_button ui_button_primary" for="xFile" ><span>&nbsp;上传图片</span></label>
+             <form  action='/upload' method='post' enctype='multipart/form-data' >
+                 <input name="photo" type="file" id="xFile" style="position:absolute;clip:rect(0 0 0 0);">
+                 <input type="submit" value="上传">
+
+             </form>
+        </div>
+   </div>
+
+
+{#<form action="/upload" enctype='multipart/form-data' method='POST'>#}
+{#      <input type="file" name="file">#}
+{#       <input type="submit" value="上传">#}
+{#    </form>#}
+{#   #}
+  <!--16宫格-->
+
+   <div class="form2">
+{% for item in range(16) %}
+       <img src={{ name }}>
+{% endfor %}
+
+  </div>
+<!--上传文件-->
+
+<!--最底部-->
+     <div class="footer">
+     	<p class="p1">xxxxxx</p>
+     	<hr color="#6f6f6f"/>
+     	<div class="footer-logo">
+     		<img src="../static/img/footer-logo.png"/>
+     	</div>
+     	<p class="p2">
+     	   地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址：xxxxxxxxxxxxxxx<br/>
+     	   Copyright&nbsp;©&nbsp;201x-201x&nbsp;xxxxxxxxxxxxxx有&nbsp;&nbsp;&nbsp;&nbsp;备案号：冀ICP备xxxxxx号
+     	</p>
+     </div>
+<!--最底部-->
+</body>
+</html>
